@@ -1,5 +1,19 @@
 #include <stdio.h>
 
+bool isPalindrome(int x){
+    if (x < 0)
+        return 0;
+    
+    long y = 0;
+    long temp = x;
+    while (temp) {
+        y = y * 10 + (temp % 10);
+        temp /= 10;
+    }
+    return y == x;
+}
+
+/*
 int isPalindrome(int x){
     if (x < 0)
         return 0;
@@ -29,6 +43,7 @@ int isPalindrome(int x){
     }
     return 1;
 }
+*/
 
 int main()
 {
